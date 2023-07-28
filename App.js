@@ -7,6 +7,7 @@ import Login from './navigation/login';
 import Signup from './navigation/register/register';
 import Home from './navigation/home/home';
 import ContinueWithPhone from './navigation/register/continueWithPhone';
+import Course from './navigation/course';
 
 const Stack = createNativeStackNavigator();
 
@@ -14,11 +15,12 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={Home} options={{ headerShown: false }}/>
+        <Stack.Screen name="Course" component={Course} options={{ headerShown: false }} />
+        <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
         <Stack.Screen name="Intro" component={Intro} options={{ headerShown: false }} />
         <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
         <Stack.Screen name="Signup" component={Signup} options={{ headerShown: false }} />
-        <Stack.Screen name="ContinueWithPhone" component={ContinueWithPhone} options={{ headerShown: false }}/>
+        <Stack.Screen name="ContinueWithPhone" component={ContinueWithPhone} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
